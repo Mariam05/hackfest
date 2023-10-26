@@ -10,4 +10,6 @@ class RecordingsController < ApplicationController
       @recordings = []
     end
   end
+
+  helper_method :recording_date, :recording_length
 end
