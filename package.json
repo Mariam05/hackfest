@@ -2,6 +2,8 @@
   "name": "hackfest",
   "private": true,
   "dependencies": {
+    "@babel/plugin-proposal-private-methods": "^7.18.6",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
@@ -12,6 +14,7 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "tailwindcss": "^3.3.5",
     "webpack-dev-server": "^3"
   }
 }

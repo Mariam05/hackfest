@@ -18,5 +18,10 @@ module Hackfest
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    config.bigbluebutton_endpoint = ENV['BIGBLUEBUTTON_ENDPOINT']
+    config.bigbluebutton_secret = ENV['BIGBLUEBUTTON_SECRET']
+
+    config.cache_enabled = ENV.fetch('CACHE_ENABLED', 'false').casecmp?('true')
   end
 end

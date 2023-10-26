@@ -1,0 +1,48 @@
+<%
+# BigBlueButton open source conferencing system - http://www.bigbluebutton.org/.
+# Copyright (c) 2018 BigBlueButton Inc. and by respective authors (see below).
+# This program is free software; you can redistribute it and/or modify it under the
+# terms of the GNU Lesser General Public License as published by the Free Software
+# Foundation; either version 3.0 of the License, or (at your option) any later
+# version.
+#
+# BigBlueButton is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.
+# You should have received a copy of the GNU Lesser General Public License along
+# with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
+%>
+
+<div id="body">
+
+
+<!--- 
+ 
+    <div class = "flex justify-between items-center rounded-lg border mb-10">
+    <table class="w-full max-w-full rounded-lg text-left border-collapse text-sm" >
+      <thead class="text-left uppercase border-b rounded-lg bg-gray-100 text-sm text-gray-500 font-sans py-4" >
+        <tr>
+          <th class="px-6 py-4"><%= t("default.recording.table.name") + "/" + t("default.recording.table.description") %></th>
+          <th class="px-6"><%= t("default.recording.table.date") %></th>
+          <th class="px-6"><%= t("default.recording.table.duration") %></th>
+          <th class="px-6"><%= t("default.recording.table.formats") %></th>
+          <th class="px-2 "></th>  
+        </tr>
+      </thead>
+      <tbody id="recording-table">
+        <% if @recordings.empty? %>
+          <tr>
+            <td colspan="7" class="text-center h4 p-6 font-weight-normal">
+              <%= t("default.recording.no_recordings") %>
+            </td>
+          </tr>
+        <% else %>
+          <% @recordings.each do |recording| %>
+            <%= render "shared/components/recording_row", recording: recording %>
+          <% end %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+--->
+</div>

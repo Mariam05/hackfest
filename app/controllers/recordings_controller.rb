@@ -1,0 +1,13 @@
+class RecordingsController < ApplicationController
+  include BbbHelper
+
+  def index
+    begin
+     @recordings = recordings
+    rescue BigBlueButton::BigBlueButtonException => e
+      logger.error(e.to_s)
+      flash.now[:alert] = t('default.recording.server_down')
+      @recordings = []
+    end
+  end
+end
