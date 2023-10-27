@@ -38,7 +38,7 @@ module BbbHelper
 
 	# Fetch an individual recording
 	def recording(record_id)
-		r = bbb.get_recordings(meetingID: @room.handler, recordID: record_id)
+		r = bbb.get_recordings(recordID: record_id)
 		unless r.key?(:error)
 
 			r[:playbacks] = if !r[:playback] || !r[:playback][:format]

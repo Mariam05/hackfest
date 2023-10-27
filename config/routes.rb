@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   root "recordings#index"
   
   get "/recordings", to: "recordings#index"
+  get "/recordings/:id", to: "recordings#show", as: :show_summary
+
 end

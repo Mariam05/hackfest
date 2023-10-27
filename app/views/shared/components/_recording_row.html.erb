@@ -17,9 +17,9 @@
     <div class="text-left font-sans px-5 py-3 ">
       <div id="recording-title" class="form-inline font-bold edit_hover_class" >
           <% if recording[:metadata][:name] %>
-              <text id='recording-title-text' class="text-wrap input recording-text"><%= recording[:metadata][:name] %></text>
+            <%= link_to recording[:metadata][:name], recording_path(recording[:recordID]), :name => recording[:metadata][:name], id: 'recording-title-text', class: "text-wrap text-blue-700 input recording-text", target: "_blank"%>
           <% else %>
-            <text id='recording-title-text' class="text-wrap input recording-text"><%= recording[:name] %></text>
+            <%= link_to recording[:name], show_summary_path(recording[:recordID]), :name => recording[:name], id: 'recording-title-text', class: "text-wrap input text-blue-700 recording-text",target: "_blank" %>
           <% end %>
     
       </div>
