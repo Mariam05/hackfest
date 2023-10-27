@@ -1,3 +1,5 @@
+require 'ML/recording_summarizer'
+
 class RecordingsController < ApplicationController
   include BbbHelper
 
@@ -14,7 +16,16 @@ class RecordingsController < ApplicationController
   # GET recordings/:record-id
   def show
     @recording = recording(params[:id])
-    @recording[:summary] = 'this is the summary'
+    
+
+    puts("\n\n**** @recording: #{@recording}")
+
+    @summarizer = ML::RecordingSummarizer.new(@recording, Rails.configuration.openai_key)
+    @recording[:summary] = @summarizer.summary
+    @recording[:summaryTS] = @summarizer.summary(true)
+
+    puts("\n\n**** @summarizer.summary(true): #{@summarizer.summary(true)}")
+
   end
 
   helper_method :recording_date, :recording_length

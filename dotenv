@@ -4,3 +4,5 @@
 
 ## False by default
 # CACHE_ENABLED = true
+
+# 'OPENAPI_KEY' = 

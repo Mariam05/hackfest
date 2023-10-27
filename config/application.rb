@@ -23,5 +23,7 @@ module Hackfest
     config.bigbluebutton_secret = ENV['BIGBLUEBUTTON_SECRET']
 
     config.cache_enabled = ENV.fetch('CACHE_ENABLED', 'false').casecmp?('true')
+
+    config.openai_key = ENV['OPENAI_KEY']
   end
 end

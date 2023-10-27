@@ -57,3 +57,11 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bigbluebutton-api-ruby', '~> 1.9.0'
+
+gem 'webvtt-ruby'
+gem 'uri'
+gem 'net-http'
+gem 'json', '~> 2.6', '>= 2.6.3'
+gem 'dotenv', '~> 2.8', '>= 2.8.1'
+gem "ruby-openai"
+gem 'open-uri', '~> 0.3.0'

@@ -1,6 +1,6 @@
 
     <div class="text-4xl text-blue-700"> 
-        <%= "Summary of #{@recording[:name]}" %>
+        <%= "Summary of #{@recording[:metadata][:name] || @recording[:name]}" %>
     </div>
 
     <hr>
